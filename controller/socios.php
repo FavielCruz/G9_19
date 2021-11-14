@@ -1,5 +1,5 @@
 <?php
-if($_SERVER['REQUEST_METHOD']){
+if($_SERVER['REQUEST_METHOD'] === 'OPTIONS'){
     header('Access-Control-Allow-Origin: *');
     header('Access-Control-Allow-Methods: POST, GET, DELETE, PUT, PATCH, OPTIONS');
     header('Access-Control-Allow-Headers: token, Content-Type');
@@ -8,7 +8,6 @@ if($_SERVER['REQUEST_METHOD']){
     header('Content-Type: text/plain');
     die();
 }
-
     header('Access-Control-Allow-Origin: *');
     header('Content-Type: application/json');
 
