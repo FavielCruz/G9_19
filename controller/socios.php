@@ -40,7 +40,7 @@ header('Content-Type: application/json');
 
         //UPDATE
         case "UpdateSocio":
-            $datos=$socios->update_socio($body["nombre"],$body["razon_social"],$body["direccion"],$body["tipo_socio"],$body["contacto"],$body["email"],$body["fecha_creado"],$body["estado"],$body["telefono"],$body["id"]);
+            $datos=$socios->update_socio($body["id"],$body["nombre"],$body["razon_social"],$body["direccion"],$body["tipo_socio"],$body["contacto"],$body["email"],$body["fecha_creado"],$body["estado"],$body["telefono"]);
             echo json_encode("Socio Actualizado");
         break;
         

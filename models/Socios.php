@@ -44,7 +44,7 @@
             parent::set_names();
             $sql="DELETE from ma_socios_negocio WHERE estado = 1 AND id = ?";
             $sql=$conectar->prepare($sql);
-            $sql->bindValue(1, $id);
+            $sql->bindValue(1,$id);
             $sql->execute();
             return $resultado=$sql->fetchAll(PDO::FETCH_ASSOC);
         }
@@ -57,16 +57,16 @@
             email=?,fecha_creado=?,estado=?,telefono=?
             WHERE id=?;";
             $sql=$conectar->prepare($sql);
-            $sql->bindValue(1,$nombre);
-            $sql->bindValue(2,$razon_social);
-            $sql->bindValue(3,$direccion);
-            $sql->bindValue(4,$tipo_socio);
-            $sql->bindValue(5,$contacto);
-            $sql->bindValue(6,$email);
-            $sql->bindValue(7,$fecha_creado);
-            $sql->bindValue(8,$estado);
-            $sql->bindValue(9,$telefono);
-            $sql->bindValue(10,$id);
+            $sql->bindValue(1,$id);
+            $sql->bindValue(2,$nombre);
+            $sql->bindValue(3,$razon_social);
+            $sql->bindValue(4,$direccion);
+            $sql->bindValue(5,$tipo_socio);
+            $sql->bindValue(6,$contacto);
+            $sql->bindValue(7,$email);
+            $sql->bindValue(8,$fecha_creado);
+            $sql->bindValue(9,$estado);
+            $sql->bindValue(10,$telefono);
             $sql->execute();
             return $resultado=$sql->fetchAll(PDO::FETCH_ASSOC);
         }
