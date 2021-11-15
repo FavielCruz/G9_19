@@ -1,0 +1,4 @@
+# G9_19
+Proyecto de la segunda unidad
+el API de update no le funciona porque tiene un error en la secuencia de los parámetros, 
+en el controller tiene el Id al final y en la Función del models lo tiene al inicio, los parámetros deben ponerse en el orden que se definen. 
